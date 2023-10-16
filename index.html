@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #first-name,#last-name,#address,#pincode,#state,#country{
+            height: 24px;
+            width: 350px;
+            border-radius: 3px;
+            margin-top: 5px;
+            border: 1px solid;
+        }
+        #gender{
+            width: 15px;
+            margin-top: 0px;
+        }
+        body{
+            background-image: linear-gradient(to left,#FF5F6D, #FFC371);
+            
+            flex-wrap: wrap;
+        }
+            
+        
+        form{
+            background-color: white;
+            text-transform: capitalize;
+            font-size: 15px;
+            width: 400px;
+            margin-left: 40px;
+            padding-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            border-radius: 0px;
+            padding-left: 0px;
+            text-transform: capitalize;
+            margin-top: 30px;
+        }
+
+        table,tr,td,th{
+            margin-top: 30px;
+            text-align: center;
+            border: 2px solid;
+            border-collapse: collapse;
+            margin-left: 20px;
+            padding: 10px;
+            background-color: white;
+            text-transform: capitalize;
+            font-family: Arial, Helvetica, sans-serif;
+          
+        }
+        .head{
+            margin-top: 10px;
+            width: 400px;
+            height: 60px;
+            background-color: tomato;
+
+
+            }
+
+        h1{
+            text-transform: capitalize;
+            text-align: center;
+            color: white;
+            padding-top: 13px;
+         
+        }
+        th{
+            text-transform: capitalize;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 0px;
+            background-color:tomato;    
+        }
+        #address{
+            height: 70px;
+            width: 350px;
+            
+        }
+        button{
+            width: 100px;
+            margin-left: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 19px;
+            color: white;
+            background-color: tomato;
+            border: none;
+        }
+        select{
+            width: 350px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        #food{
+            margin-top: 10px;
+        }
+        .form-group{
+            padding-left: 20px;
+        }
+            
+    </style>
+</head>
+<body>
+    
+    <form method="post" id="form">
+        <div class="head">
+        <h1 id="title">form manipulation</h1>
+    </div>
+        <div class="form-group">
+            <p>
+            <label for="firstname">firstname:</label><br>
+            <input type="text" name="first-name" id="first-name" required placeholder="firstname"><br>
+            </p>
+        </div>
+        <div class="form-group">
+            <p>
+            <label for="lastname" id="lname">lastname:</label><br>
+            <input type="text" name="last-name" id="last-name" required placeholder="lastName"><br>
+        </p>
+        </div>
+        <div class="form-group">
+            <p id="description">
+            <label for="address" id="add">address:</label><br>
+            <textarea type="text" name="address" id="address" required placeholder="address" label="address"></textarea><br>
+            </p> 
+        </div>
+        <div class="form-group">
+            <p>
+            <label for="pincode">pincode:</label><br>
+            <input type="text" name="pincode" id="pincode" required placeholder="pincode"><br>
+        </p>
+        </div>
+        <div class="form-group">
+            <p>
+            <label for="gender">gender:</label><br><br>
+            <input type="radio" name="gender" id="gender" value="male" required>male
+            <input type="radio" name="gender" id="gender" value="female" required>female<br>
+        </p>
+        </div>
+        <div class="form-group">
+            <p>
+            <label for="food" id="food">choice of food:</label><br>
+            <select name="food" multiple size="6" id="parent">
+                <option value="">...select food...</option>
+                <option value="biriyani" name='foods' id="foods">Biriyani</option>
+                <option value="dosa" name='foods' id="foods">Dosa</option>
+                <option value="pongal" name='foods' id="foods">Pongal</option>
+                <option value="meals" name='foods' id="foods">Meals</option>
+                <option value="rice" name='foods' id="foods">Rice</option>
+          </select>
+        </p>
+        </div>
+        <div class="form-group">
+            <p>
+            <label for="state">state:</label><br>
+            <input type="text" name="state" id="state" required placeholder="state"><br>
+        </p>
+        </div>
+        <div class="form-group">
+            <p>
+            <label for="country">country:</label><br>
+            <input type="text" name="country" id="country" required placeholder="country"><br><br>
+        </p>
+        </div>
+
+        <div class="form-group">
+          <button type="button" id="submit" class="btn btn-primary">submit</button>
+          <button type="button" id="clear" class="btn btn-primary">clear</button>
+   
+        </div>
+       
+    </div>
+    </form>
+    <div id="tablemain">
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                    <th>address</th>
+                    <th>pincode</th>
+                    <th>gender</th>
+                    <th>choice of food</th>
+                    <th>state</th>
+                    <th>country</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+</div>
+
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+
+</body>
+</html>
